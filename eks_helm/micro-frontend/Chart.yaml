@@ -1,0 +1,4 @@
+apiVersion: v2
+name: micro-frontend
+description: A Helm chart for deploying the frontend microservice
+version: 0.1.0

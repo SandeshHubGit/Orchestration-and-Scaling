@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micro-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: micro-backend
+  template:
+    metadata:
+      labels:
+        app: micro-backend
+    spec:
+      containers:
+        - name: micro-backend
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.containerPort }}

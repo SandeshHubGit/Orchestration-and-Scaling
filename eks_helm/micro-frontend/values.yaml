@@ -1,0 +1,10 @@
+image:
+  repository: <ACCOUNT_ID>.dkr.ecr.ap-south-1.amazonaws.com/micro-frontend
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 3000
+
+containerPort: 3000
